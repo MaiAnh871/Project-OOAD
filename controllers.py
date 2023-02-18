@@ -2,6 +2,8 @@ from turtle import update
 from venv import create
 from model import *
 from utils import *
+import re
+from PyQt5.QtWidgets import QMessageBox
 
 def check_username_exist(username):
     mycursor.reset()
@@ -21,14 +23,43 @@ def create_account(username, passwd, role):
         date_time = datetime.now()
         mycursor.execute("INSERT INTO Users (username, passwd, created, role) VALUES (%s,%s,%s,%s)", (username, passwd, date_time, role))
         last_id = mycursor.lastrowid
-
+        flag = 0
+    while True:
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
+        if (len(passwd)<=8):
+            flag = -1
+            break
+        elif not re.search("[a-z]", passwd):
+            flag = -1
+            break
+        elif not re.search("[A-Z]", passwd):
+            flag = -1
+            break
+        elif not re.search("[0-9]", passwd):
+            flag = -1
+            break
+        elif not re.search("[_@$]" , passwd):
+            flag = -1
+            break
+        elif re.search("\s" , passwd):
+            flag = -1
+            break
+        else:
+            flag = 0
+            break
+        
+    if flag == -1:
+        create_account(username, passwd, role)
+        msg_box.setText("Password Not Validate !!")
+        msg_box.exec_()
+    elif flag == 0:
         if role == '1':
             mycursor.execute("INSERT INTO Managers (id, created) VALUES (%s,%s)", (last_id, date_time))
         elif role == '2':
             mycursor.execute("INSERT INTO Teachers (id, created) VALUES (%s,%s)", (last_id, date_time))
         elif role == '3':
             mycursor.execute("INSERT INTO Students (id, created) VALUES (%s,%s)", (last_id, date_time))
-
         db.commit()
 
         return 1
@@ -75,16 +106,19 @@ def remove_item(table_name, id_key, id):
     db.commit()
 
 def login_user(username, passwd):
+    msg_box = QMessageBox()
+    msg_box.setFixedSize(400, 300)
     mycursor.execute(f'SELECT * FROM Users WHERE username=\'{username}\'')
     user = mycursor.fetchone()
     if user == None:
         return [-1, None]
     else:
-        user_id, user_role, user_passwd = user[0], user[4], user[3]
-        if user_passwd != passwd:
-            return -2, None
-        else:
-            return 1, [user_id, user_role]
+            user_id, user_role, user_passwd = user[0], user[4], user[3]
+    
+    if user_passwd != passwd:
+        return -2, None
+    else:
+        return 1, [user_id, user_role]
 
 def get_all_accounts():
     mycursor.reset()

@@ -5,7 +5,8 @@ import sys
 from turtle import update
 from winsound import PlaySound
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QLabel
+from PyQt5.QtWidgets import QDialog, QApplication, QFileDialog, QLabel, QMessageBox, QPushButton
+from PyQt5.QtCore import QSize  
 from PyQt5.uic import loadUi
 from model import *
 from controllers import *
@@ -21,14 +22,23 @@ class Login(QDialog):
         passwd = self.passwordInput.text()
 
         state, payload = login_user(username, passwd)
-
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
         if state == -1:
-            self.alertLabel.setText('Not exist username !!')
+            #self.alertLabel.setText('Not exist username !!')        
+            msg_box.setText("Not exist username !!")
+            msg_box.setWindowTitle("Error !!!")
+            msg_box.setIcon(QMessageBox.Warning)
+            msg_box.exec_()
         elif state == -2:
-            self.alertLabel.setText('Password wrong !!')
+            #self.alertLabel.setText('Password wrong !!')
+            msg_box.setText("Password wrong !!")
+            msg_box.setWindowTitle("Error !!!")
+            msg_box.setIcon(QMessageBox.Warning)
+            msg_box.exec_()
         elif state == 1:
             user_id, user_role = payload
-
+            
             if user_role == '0':
                 adminHome = AdminHome(user_id)
                 widget.addWidget(adminHome)
@@ -46,7 +56,10 @@ class Login(QDialog):
                 widget.addWidget(studentHome)
                 widget.setCurrentIndex(widget.currentIndex() + 1)
 
-            print("Login successfully !!")
+            #print("Login successfully !!")
+            msg_box.setText("Login successfully !!")
+            msg_box.exec_()
+
 
 class Register(QDialog):
     def __init__(self, user_id):
@@ -61,12 +74,20 @@ class Register(QDialog):
         widget.addWidget(adminHome)
         widget.setCurrentIndex(widget.currentIndex() + 1)
     
+    def Function(self):
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
+        state = create_account(self.usernameInput.text(), self.passwordInput.text(), self.roleInput.text())
+
     def registerFunction(self):
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
         state = create_account(self.usernameInput.text(), self.passwordInput.text(), self.roleInput.text())
 
         if state == 1:
-            print('CREATE SUCCESSFULLY !!')
-
+            msg_box.setText("CREATE SUCCESSFULLY !!")
+            msg_box.exec_()
+            
 class AdminHome(QDialog):
     def __init__(self, user_id):
         super(AdminHome, self).__init__()
@@ -992,3 +1013,4 @@ if __name__ == "__main__":
         sys.exit(app.exec_())
     except:
         print("Exit !!!")
+   
