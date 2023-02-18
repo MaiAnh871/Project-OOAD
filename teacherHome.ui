@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>540</width>
-    <height>419</height>
+    <width>974</width>
+    <height>615</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="logoutBtn">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>410</x>
      <y>10</y>
      <width>161</width>
      <height>51</height>
@@ -36,7 +36,7 @@
   <widget class="QPushButton" name="openInfosBtn">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>220</x>
      <y>10</y>
      <width>161</width>
      <height>51</height>
@@ -74,9 +74,9 @@
   <widget class="QPushButton" name="enterScoreBtn">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>100</y>
-     <width>201</width>
+     <x>220</x>
+     <y>90</y>
+     <width>351</width>
      <height>51</height>
     </rect>
    </property>
@@ -94,9 +94,9 @@
   <widget class="QPushButton" name="addStudentBtn">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>220</x>
      <y>170</y>
-     <width>161</width>
+     <width>351</width>
      <height>51</height>
     </rect>
    </property>
@@ -108,7 +108,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Add Student</string>
+    <string>Add Students</string>
    </property>
   </widget>
   <widget class="QLabel" name="teacherTypeLabel">
@@ -116,7 +116,7 @@
     <rect>
      <x>20</x>
      <y>70</y>
-     <width>311</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
@@ -150,9 +150,9 @@
   <widget class="QPushButton" name="showStudentScoresBtn">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>270</y>
-     <width>311</width>
+     <x>220</x>
+     <y>250</y>
+     <width>351</width>
      <height>51</height>
     </rect>
    </property>

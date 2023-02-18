@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1055</width>
-    <height>501</height>
+    <height>775</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QTableWidget" name="mySubjectClassesTable">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>50</x>
      <y>160</y>
-     <width>431</width>
+     <width>381</width>
      <height>192</height>
     </rect>
    </property>
@@ -41,27 +41,29 @@
   <widget class="QLabel" name="classIdLabela">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>30</x>
      <y>110</y>
-     <width>111</width>
+     <width>241</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>My classes</string>
+    <string>My Subject Classes</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="myStudentsTable">
    <property name="geometry">
     <rect>
-     <x>660</x>
+     <x>640</x>
      <y>160</y>
-     <width>256</width>
+     <width>381</width>
      <height>192</height>
     </rect>
    </property>
@@ -79,15 +81,17 @@
   <widget class="QLabel" name="classIdLabel_2a">
    <property name="geometry">
     <rect>
-     <x>740</x>
+     <x>620</x>
      <y>110</y>
-     <width>111</width>
+     <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -97,7 +101,7 @@
   <widget class="QPushButton" name="comeBackBtn">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>890</x>
      <y>20</y>
      <width>131</width>
      <height>41</height>
@@ -117,7 +121,7 @@
   <widget class="QPushButton" name="chooseBtn">
    <property name="geometry">
     <rect>
-     <x>490</x>
+     <x>470</x>
      <y>230</y>
      <width>131</width>
      <height>41</height>
@@ -137,7 +141,7 @@
   <widget class="QPushButton" name="updateScoreBtn">
    <property name="geometry">
     <rect>
-     <x>710</x>
+     <x>850</x>
      <y>370</y>
      <width>171</width>
      <height>41</height>
@@ -157,7 +161,7 @@
   <widget class="QLabel" name="classIdLabel">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>30</x>
      <y>30</y>
      <width>181</width>
      <height>41</height>

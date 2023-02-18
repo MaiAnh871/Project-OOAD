@@ -60,7 +60,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Enter Your Pass Word</string>
+    <string>Enter Your Password</string>
    </property>
   </widget>
   <widget class="QLabel" name="alertLabel">
@@ -107,7 +107,7 @@
     </font>
    </property>
    <property name="text">
-    <string>login</string>
+    <string>Login</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="userNameInput">

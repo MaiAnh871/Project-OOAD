@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1077</width>
+    <width>1126</width>
     <height>838</height>
    </rect>
   </property>
@@ -16,12 +16,21 @@
   <widget class="QTableWidget" name="teachersTable">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>541</width>
+     <x>60</x>
+     <y>60</y>
+     <width>481</width>
      <height>192</height>
     </rect>
    </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>120</number>
+   </attribute>
+   <attribute name="verticalHeaderDefaultSectionSize">
+    <number>37</number>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>30</number>
+   </attribute>
    <column>
     <property name="text">
      <string>Teacher ID</string>
@@ -29,12 +38,12 @@
    </column>
    <column>
     <property name="text">
-     <string>Type of teacher</string>
+     <string>Type of Teacher</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Home Room Class ID</string>
+     <string>Homeroom Class ID</string>
     </property>
    </column>
    <column>
@@ -46,26 +55,28 @@
   <widget class="QLabel" name="managerIdLabel">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>10</y>
+     <x>40</x>
+     <y>20</y>
      <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Teacher Table</string>
+    <string>Teacher List</string>
    </property>
   </widget>
   <widget class="QPushButton" name="comeBackBtn">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>20</y>
+     <x>880</x>
+     <y>40</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -84,8 +95,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>370</y>
+     <x>60</x>
+     <y>390</y>
      <width>91</width>
      <height>21</height>
     </rect>
@@ -102,9 +113,9 @@
   <widget class="QLineEdit" name="classNameInput">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>370</y>
-     <width>181</width>
+     <x>180</x>
+     <y>380</y>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
@@ -115,15 +126,17 @@
   <widget class="QLabel" name="managerIdLabel_2">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>320</y>
+     <x>40</x>
+     <y>340</y>
      <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -133,8 +146,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>430</y>
+     <x>60</x>
+     <y>440</y>
      <width>91</width>
      <height>21</height>
     </rect>
@@ -151,9 +164,9 @@
   <widget class="QLineEdit" name="classTeacherIdInput">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>180</x>
      <y>430</y>
-     <width>181</width>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
@@ -164,15 +177,17 @@
   <widget class="QLabel" name="managerIdLabel_3">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>300</y>
-     <width>151</width>
-     <height>31</height>
+     <x>610</x>
+     <y>340</y>
+     <width>240</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -182,8 +197,8 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>360</y>
+     <x>630</x>
+     <y>390</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -200,8 +215,8 @@
   <widget class="QLineEdit" name="subjectNameInput">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>350</y>
+     <x>770</x>
+     <y>380</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -213,8 +228,8 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>410</y>
+     <x>630</x>
+     <y>440</y>
      <width>91</width>
      <height>21</height>
     </rect>
@@ -231,8 +246,8 @@
   <widget class="QLineEdit" name="subjectClassTeacherIdInput">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>410</y>
+     <x>770</x>
+     <y>430</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -244,8 +259,8 @@
   <widget class="QPushButton" name="createClassBtn">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>470</y>
+     <x>410</x>
+     <y>390</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -264,8 +279,8 @@
   <widget class="QPushButton" name="createSubjectClassBtn">
    <property name="geometry">
     <rect>
-     <x>820</x>
-     <y>460</y>
+     <x>970</x>
+     <y>390</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -284,8 +299,8 @@
   <widget class="QPushButton" name="updateTeachersTableBtn">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
+     <x>300</x>
+     <y>260</y>
      <width>241</width>
      <height>41</height>
     </rect>
@@ -304,15 +319,33 @@
   <widget class="QTableWidget" name="classesTable">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>540</y>
-     <width>401</width>
+     <x>60</x>
+     <y>550</y>
+     <width>471</width>
      <height>192</height>
     </rect>
    </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="columnCount">
+    <number>3</number>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>155</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>49</number>
+   </attribute>
    <column>
     <property name="text">
      <string>Class ID</string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
     </property>
    </column>
    <column>
@@ -329,12 +362,15 @@
   <widget class="QTableWidget" name="subjectClassesTable">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>530</y>
-     <width>401</width>
+     <x>630</x>
+     <y>550</y>
+     <width>471</width>
      <height>192</height>
     </rect>
    </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>155</number>
+   </attribute>
    <column>
     <property name="text">
      <string>Subject Class ID</string>
@@ -354,7 +390,7 @@
   <widget class="QPushButton" name="removeClassBtn">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>230</x>
      <y>750</y>
      <width>131</width>
      <height>41</height>
@@ -374,7 +410,7 @@
   <widget class="QPushButton" name="updateClassesBtn">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>400</x>
      <y>750</y>
      <width>131</width>
      <height>41</height>
@@ -394,8 +430,8 @@
   <widget class="QPushButton" name="updateSubjectClassesBtn">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>740</y>
+     <x>970</x>
+     <y>750</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -414,8 +450,8 @@
   <widget class="QPushButton" name="removeRemoveClassBtn">
    <property name="geometry">
     <rect>
-     <x>860</x>
-     <y>740</y>
+     <x>800</x>
+     <y>750</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -431,22 +467,44 @@
     <string>Remove</string>
    </property>
   </widget>
-  <widget class="QLabel" name="alertLabel">
+  <widget class="QLabel" name="managerIdLabel_4">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>180</y>
-     <width>411</width>
+     <x>40</x>
+     <y>510</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>11</pointsize>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Alert</string>
+    <string>Class List</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="managerIdLabel_5">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>510</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Subject Class List</string>
    </property>
   </widget>
  </widget>

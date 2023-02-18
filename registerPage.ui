@@ -59,7 +59,7 @@
     </font>
    </property>
    <property name="text">
-    <string>register</string>
+    <string>Register</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -72,7 +72,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Enter Your password</string>
+    <string>Enter Your Password</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -85,7 +85,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Enter Your role</string>
+    <string>Enter Your Role</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="usernameInput">
@@ -127,7 +127,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Enter Your username</string>
+    <string>Enter Your Username</string>
    </property>
   </widget>
   <widget class="QPushButton" name="comeBackBtn">
