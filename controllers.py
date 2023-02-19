@@ -22,6 +22,7 @@ def create_account(username, passwd, role):
 
     date_time = datetime.now()
     flag = 0
+
     while True:
         if (len(passwd)<=8):
             flag = -1

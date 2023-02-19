@@ -584,16 +584,22 @@ class CreateClass(QDialog):
             row += 1
 
     def createClass(self):
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
         state = create_class(self.classNameInput.text(), int(self.classTeacherIdInput.text()))
         if state == 1:
             print('Create class successfully !!')
             self.initComponent()
             self.loadClassesList()
             self.loadTeachersList()
-            self.alertLabel.setText('Create class successfully !!')
+            #self.alertLabel.setText('Create class successfully !!')
+            msg_box.setText('Create class successfully !!');
+            msg_box.setWindowTitle("Succeed !!!")
+            msg_box.setIcon(QMessageBox.Information)
+            msg_box.exec_()
 
         elif state == -1:
-            self.alertLabel.setText(f'Giao Vien co ID {int(self.classTeacherIdInput.text())} da co lop')
+            #self.alertLabel.setText(f'Giao Vien co ID {int(self.classTeacherIdInput.text())} da co lop')
             print(f'The teacher with ID {int(self.classTeacherIdInput.text())} has a class')
 
     def createSubjectClass(self):
@@ -659,7 +665,7 @@ class CreateClass(QDialog):
                 break
 
         if i == len(self.classes)-1:
-            self.alertLabel.setText('Update class successfully')
+            #self.alertLabel.setText('Update class successfully')
             print('Update class successfully')
 
     def updateSubjectClasses(self):
