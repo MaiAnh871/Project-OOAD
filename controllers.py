@@ -19,14 +19,10 @@ def create_account(username, passwd, role):
 
     if status == -1:
         return -1
-    else:
-        date_time = datetime.now()
-        mycursor.execute("INSERT INTO Users (username, passwd, created, role) VALUES (%s,%s,%s,%s)", (username, passwd, date_time, role))
-        last_id = mycursor.lastrowid
-        flag = 0
+
+    date_time = datetime.now()
+    flag = 0
     while True:
-        msg_box = QMessageBox()
-        msg_box.setFixedSize(400, 300)
         if (len(passwd)<=8):
             flag = -1
             break
@@ -50,19 +46,24 @@ def create_account(username, passwd, role):
             break
         
     if flag == -1:
-        create_account(username, passwd, role)
-        msg_box.setText("Password Not Validate !!")
+        msg_box = QMessageBox()
+        msg_box.setFixedSize(400, 300)
+        msg_box.setText("Password Not Validated !!")
         msg_box.exec_()
-    elif flag == 0:
-        if role == '1':
-            mycursor.execute("INSERT INTO Managers (id, created) VALUES (%s,%s)", (last_id, date_time))
-        elif role == '2':
-            mycursor.execute("INSERT INTO Teachers (id, created) VALUES (%s,%s)", (last_id, date_time))
-        elif role == '3':
-            mycursor.execute("INSERT INTO Students (id, created) VALUES (%s,%s)", (last_id, date_time))
-        db.commit()
+        return -1
 
-        return 1
+    mycursor.execute("INSERT INTO Users (username, passwd, created, role) VALUES (%s,%s,%s,%s)", (username, passwd, date_time, role))
+    last_id = mycursor.lastrowid
+
+    if role == '1':
+        mycursor.execute("INSERT INTO Managers (id, created) VALUES (%s,%s)", (last_id, date_time))
+    elif role == '2':
+        mycursor.execute("INSERT INTO Teachers (id, created) VALUES (%s,%s)", (last_id, date_time))
+    elif role == '3':
+        mycursor.execute("INSERT INTO Students (id, created) VALUES (%s,%s)", (last_id, date_time))
+
+    db.commit()
+    return 1
 
 def create_class(className, teacherId):
     # return
